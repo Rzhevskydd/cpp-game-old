@@ -1,0 +1,64 @@
+Language: Cpp
+Standard: Auto
+ColumnLimit: 120
+
+ReflowComments: true
+
+UseTab: Never
+IndentWidth: 8
+AccessModifierOffset: -8
+ContinuationIndentWidth: 16
+ConstructorInitializerIndentWidth: 16
+MaxEmptyLinesToKeep: 2
+
+IndentCaseLabels: false
+# IndentGotoLabels: false  # v10
+IndentPPDirectives: None
+NamespaceIndentation: All
+
+Cpp11BracedListStyle: false
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeParens: ControlStatements
+# SpaceInEmptyBlock: true  # v10
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+AlignAfterOpenBracket: Align
+AlignEscapedNewlines: Left
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+# AlignConsecutiveMacros: true  # v9
+AlignOperands: true  # weird formatting
+AlignTrailingComments: true
+
+AlwaysBreakAfterReturnType: All
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeBraces: Attach
+BreakBeforeBinaryOperators: All
+BreakBeforeTernaryOperators : true
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLambdasOnASingleLine: None
+AllowShortLoopsOnASingleLine: false
+
+BinPackArguments: false
+AllowAllArgumentsOnNextLine: true
+BinPackParameters: false
+AllowAllParametersOfDeclarationOnNextLine: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+AllowAllConstructorInitializersOnNextLine: true

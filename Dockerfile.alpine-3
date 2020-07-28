@@ -1,0 +1,40 @@
+FROM alpine:3 as brd-build
+
+ENV CC=clang CXX=clang++
+
+WORKDIR /opt/brd
+COPY . .
+
+RUN apk update && apk upgrade && \
+    apk add g++ \
+        clang-dev \
+        binutils \
+        make \
+        cmake \
+        python3 \
+        git \
+        pkgconf \
+        musl-dev \
+        libx11-dev \
+        libxrandr-dev \
+        eudev-dev \
+        mesa-dev && \
+    pip3 install conan
+
+RUN BRD_ROOT=. BRD_BUILD_TYPE=Release ./scripts/build-first.sh
+
+RUN mkdir to-copy && \
+    mv ./build/bin/game ./to-copy/ && \
+    mv ./media ./to-copy/
+
+# ENV LIBGL_DEBUG=verbose
+# RUN apk add mesa-dri-swrast mesa-dri-intel
+
+FROM alpine:3
+
+WORKDIR /opt/brd
+COPY --from=brd-build /opt/brd/to-copy .
+
+RUN apk add xf86-video-intel libxrandr mesa-gl
+
+CMD ./game

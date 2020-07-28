@@ -1,0 +1,54 @@
+#  ugly but whatever
+Checks: "clang-*,-clang-analyzer-osx.*,\
+bugprone-*,\
+cert-*,-cert-err58-cpp,\
+cppcoreguidelines-*,-cppcoreguidelines-avoid-magic-numbers,-cppcoreguidelines-pro-type-union-access,\
+google-*,-google-objc-*,-google-runtime-references,\
+hicpp-*,\
+modernize-*,-modernize-use-trailing-return-type,\
+perfomance-*,\
+readability-*,-readability-magic-numbers,\
+misc-*"
+
+WarningsAsErrors: '*'
+CheckOptions:
+  - key:   readability-implicit-bool-conversion.AllowPointerConditions
+    value: '1'
+  - key:   readability-inconsistent-declaration-parameter-name.Strict
+    value: '1'
+  - key:   readability-identifier-naming.ClassCase
+    value: CamelCase
+  - key:   readability-identifier-naming.ConstantCase
+    value: lower_case
+  - key:   readability-identifier-naming.StaticConstantPrefix
+    value: s_
+  - key:   readability-identifier-naming.MemberCase
+    value: lower_case
+  - key:   readability-identifier-naming.EnumCase
+    value: CamelCase
+  - key:   readability-identifier-naming.EnumConstantCase
+    value: lower_case
+  - key:   readability-identifier-naming.FunctionCase
+    value: lower_case
+  - key:   readability-identifier-naming.MemberCase
+    value: lower_case
+  - key:   readability-identifier-naming.PrivateMemberPrefix
+    value: m_
+  - key:   readability-identifier-naming.ProtectedMemberPrefix
+    value: m_
+  - key:   readability-identifier-naming.MethodCase
+    value: lower_case
+  - key:   readability-identifier-naming.NamespaceCase
+    value: lower_case
+  - key:   readability-identifier-naming.ParameterCase
+    value: lower_case
+  - key:   readability-identifier-naming.StructCase
+    value: CamelCase
+  - key:   readability-identifier-naming.TypeAliasCase
+    value: CamelCase
+  - key:   readability-identifier-naming.VariableCase
+    value: lower_case
+  - key:   readability-identifier-naming.TemplateParameterCase
+    value: CamelCase
+
+FormatStyle: file

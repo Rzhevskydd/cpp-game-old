@@ -1,0 +1,7 @@
+*
+!media
+!include
+!src
+!scripts/build-first.sh
+!CMakeLists.txt
+!conanfile.txt
